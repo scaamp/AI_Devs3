@@ -9,7 +9,7 @@ OPENAI_API_KEY = "sk-proj-BLeI8KCFXHesTmh6vV4Qn0U6feISHPxtZlMMweY1sRNCNMvR7rosK4
 
 def send_request_to_api(payload):
     response = requests.post(VERIFY_URL, json=payload)
-    response.raise_for_status()
+    # response.raise_for_status()
     return response.json()
 
 def generate_openai_response(message):
@@ -52,14 +52,7 @@ while True:
 
     # 3. Wygeneruj odpowiedź
     answer = generate_openai_response(message)
-    print("ANSWER:", answer)
-
-    # Sprawdź, czy odpowiedź zawiera flagę
-    match = re.search(r"\{\{FLG:([A-Z0-9]+)\}\}", answer)
-    if match:
-        flag = match.group(1)
-        print(f"\n🎉 FLAG DETECTED: {flag}")
-        break  # zakończ pętlę
+    print("GPT:", answer)
 
     # 4. Odeślij odpowiedź z tym samym msgID
     answer_payload = {
@@ -67,4 +60,13 @@ while True:
         "text": answer
     }
     result = send_request_to_api(answer_payload)
-    print("RESPONSE:", result)
+
+    print("ROBOT:", result)
+
+    # Sprawdź, czy odpowiedź zawiera flagę
+    match = re.search(r"\{\{FLG:([A-Z0-9]+)\}\}", result["text"])
+    if match:
+        flag = match.group(1)
+        print(f"\n🎉 FLAG DETECTED: {flag}")
+        break  # zakończ pętlę
+
