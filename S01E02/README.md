@@ -1,7 +1,4 @@
-# 🧠 AI_Devs 3 – S01E02
-
-## 🇬🇧 Task Name  
-**Authorization and Communication with AI Agent**
+# 🧠 S01E02 - Authorization and Communication with AI Agent
 
 ## Description  
 The goal was to create a program that communicates with an AI Agent via a specific HTTP endpoint. The communication followed a JSON protocol using a consistent `msgID`. The challenge was to provide "intentionally incorrect" facts (e.g., Krakow is the capital of Poland) and keep responding until the Agent returns a special flag in the form `{{FLG:XYZ}}`.
