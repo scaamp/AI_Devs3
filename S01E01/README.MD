@@ -42,5 +42,15 @@ Celem było zautomatyzowanie logowania do systemu robotów na stronie `https://x
 6. Odczytałem flagę.
 
 ## ⚠️ Problemy i wyzwania  
-- Serwer oczekiwał surowego stringa w ciele żądania `POST` – poprawiłem format.  
-- Pułapki związane z nadpisaniem kontekstu RoboIS
+- Serwer oczekiwał surowego stringa w ciele żądania `POST` – poprawiłem format.
+- Pułapki związane z RoboISO 2230 wymagały udzielania "błędnych" odpowiedzi (np. Kraków jako stolica Polski). Wymagało to ręcznej kontroli nad odpowiedziami.
+
+## 🧰 Użyte biblioteki  
+- Python 3.13  
+- `requests`, `re`, `openai`, `python-dotenv`
+
+## 🎓 Czego się nauczyłem  
+- Jak ręcznie tworzyć `application/x-www-form-urlencoded` POST.  
+- Jak przetwarzać HTML regexem bez parserów.  
+- Jak wykrywać fałszywe założenia w pytaniach i nadpisywać odpowiedzi LLM.  
+- Jak bezpiecznie zarządzać kluczami API przy pomocy `.env`.
