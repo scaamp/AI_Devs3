@@ -1,4 +1,4 @@
-# 🧠 AI_Devs 3 – Task 2
+# 🧠 AI_Devs 3 – S01E02
 
 ## 🇬🇧 Task Name  
 **Authorization and Communication with AI Agent**
