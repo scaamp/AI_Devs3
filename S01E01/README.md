@@ -3,7 +3,7 @@
 ## 🇬🇧 Task Name
 Robot Login Automation
 
-## 🇬🇧 Task Summary  
+## Task Summary  
 The goal was to automate login to the robot system at `https://xyz.ag3nts.org/`, using a provided username, password, and a dynamically changing verification question. After successful login, a hidden page with a flag had to be accessed and the flag reported.
 
 ## 🔍 My Approach  
