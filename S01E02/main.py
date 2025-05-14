@@ -2,7 +2,10 @@ import os
 import requests
 from openai import OpenAI
 import re
+from dotenv import load_dotenv
 
+# === Załaduj zmienne środowiskowe z pliku .env ===
+load_dotenv()
 # Konfiguracja
 VERIFY_URL = "https://xyz.ag3nts.org/verify"
 OPENAI_MODEL = "gpt-4"

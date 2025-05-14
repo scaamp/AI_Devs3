@@ -3,6 +3,9 @@ import requests
 import re
 import time
 from openai import OpenAI
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # === Ustawienia ===
 URL = "https://xyz.ag3nts.org/"
