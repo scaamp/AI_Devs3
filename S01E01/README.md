@@ -1,4 +1,7 @@
-# 🛠️ S01E01 – Robot Login Automation | Automatyczne logowanie robota
+# S01E01
+
+## 🇬🇧 Task Name
+Robot Login Automation
 
 ## 🇬🇧 Task Summary  
 The goal was to automate login to the robot system at `https://xyz.ag3nts.org/`, using a provided username, password, and a dynamically changing verification question. After successful login, a hidden page with a flag had to be accessed and the flag reported.
@@ -29,8 +32,10 @@ The goal was to automate login to the robot system at `https://xyz.ag3nts.org/`,
 - Secure API key management using `.env` and `dotenv`.
 
 ---
+## 🇵🇱 Task name
+Automatyczne logowanie robota
 
-## 🇵🇱 Opis zadania  
+## Opis zadania  
 Celem było zautomatyzowanie logowania do systemu robotów na stronie `https://xyz.ag3nts.org/`, przy użyciu loginu, hasła oraz odpowiedzi na dynamiczne pytanie weryfikacyjne. Po zalogowaniu należało przejść na ukrytą stronę z flagą i ją zgłosić.
 
 ## 🔍 Moje podejście  
