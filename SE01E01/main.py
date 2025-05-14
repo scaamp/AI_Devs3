@@ -1,3 +1,4 @@
+import os
 import requests
 import re
 import time
@@ -7,8 +8,8 @@ from openai import OpenAI
 URL = "https://xyz.ag3nts.org/"
 LOGIN = "tester"
 PASSWORD = "574e112a"
-OPENAI_API_KEY = "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"  # podaj swój klucz
-MODEL = "gpt-4"  # lub tańszy np. gpt-3.5-turbo
+MODEL = "gpt-4"
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
 # === Funkcja: pobieranie pytania z HTML ===
 def get_question():

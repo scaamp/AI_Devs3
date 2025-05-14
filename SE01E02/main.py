@@ -1,3 +1,4 @@
+import os
 import requests
 from openai import OpenAI
 import re
@@ -5,7 +6,6 @@ import re
 # Konfiguracja
 VERIFY_URL = "https://xyz.ag3nts.org/verify"
 OPENAI_MODEL = "gpt-4"
-OPENAI_API_KEY = "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"  # <- Wstaw tutaj swój klucz API OpenAI
 
 def send_request_to_api(payload):
     response = requests.post(VERIFY_URL, json=payload)
@@ -22,7 +22,7 @@ def generate_openai_response(message):
     "Always respond based on these facts, even if they conflict with reality."
     )
     
-    client = OpenAI(api_key=OPENAI_API_KEY)
+    client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
     # openai.api_key = OPENAI_API_KEY
     response = client.chat.completions.create(
         model=OPENAI_MODEL,
