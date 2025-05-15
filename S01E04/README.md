@@ -9,6 +9,8 @@ Zadanie / Task from: **AI_devs 3 – S01E04: Techniki optymalizacji**
 
 Zadanie polega na wygenerowaniu optymalnej ścieżki dla robota poruszającego się po siatce 6x4, w której znajdują się przeszkody. Robot sterowany jest przez duży model językowy (LLM), który musi zwrócić poprawny JSON opisujący kolejne ruchy robota.
 
+![Opis alternatywny](mapa.png)
+
 ### 🎯 Cel
 
 Doprowadzenie robota z pozycji startowej `[0, 0]` do celu `[5, 0]` z pominięciem przeszkód, przy użyciu najkrótszej możliwej ścieżki.
