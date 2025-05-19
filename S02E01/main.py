@@ -68,8 +68,9 @@ def create_combined_context(transcriptions):
 
 def analyze_transcripts(combined_text):
     try:
+        print(combined_text)
         response = openai.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": combined_text}
@@ -99,50 +100,74 @@ def send_result_to_endpoint(result):
         "answer": result
     }
     
+    headers = {
+        "Content-Type": "application/json"
+    }
+    
     try:
-        response = requests.post(endpoint, json=payload)
+        print(f"\nSending payload: {json.dumps(payload, indent=2)}")
+        response = requests.post(endpoint, json=payload, headers=headers)
+        
+        if response.status_code == 403:
+            print(f"Response content: {response.text}")
+            return None
+            
         response.raise_for_status()
         print(f"\nResponse from server: {response.text}")
         return response.json()
     except requests.exceptions.RequestException as e:
         print(f"Error sending result to endpoint: {e}")
+        if hasattr(e.response, 'text'):
+            print(f"Response content: {e.response.text}")
         return None
 
 if __name__ == "__main__":
-    selected_files = select_audio_files()
+    output_file = "combined_transcriptions.txt"
+    
+    # Check if combined transcriptions file exists
+    if os.path.exists(output_file):
+        print(f"\nFound existing transcriptions file: {output_file}")
+        with open(output_file, "r", encoding="utf-8") as f:
+            combined_context = f.read()
+        print("Loaded existing transcriptions from file")
+    else:
+        print("No existing transcriptions file found. Starting transcription process...")
+        selected_files = select_audio_files()
 
-    if not selected_files:
-        print("No files selected.")
-        exit()
+        if not selected_files:
+            print("No files selected.")
+            exit()
 
-    # Array to store all transcriptions
-    all_transcriptions = []
+        # Array to store all transcriptions
+        all_transcriptions = []
 
-    for path in selected_files:
-        try:
-            text = transcribe_audio(path)
-            print(f"\n--- {os.path.basename(path)} ---")
-            print(text)
-            all_transcriptions.append(text)
-        except Exception as e:
-            print(f"Error processing {path}: {e}")
+        for path in selected_files:
+            try:
+                text = transcribe_audio(path)
+                print(f"\n--- {os.path.basename(path)} ---")
+                print(text)
+                all_transcriptions.append(text)
+            except Exception as e:
+                print(f"Error processing {path}: {e}")
 
-    if all_transcriptions:
-        print("\n=== Combined context from all transcriptions ===")
-        combined_context = create_combined_context(all_transcriptions)
-        print(combined_context)
-        
-        # Save combined context to a file
-        output_file = "combined_transcriptions.txt"
-        with open(output_file, "w", encoding="utf-8") as f:
-            f.write(combined_context)
-        print(f"\nSaved combined context to file: {output_file}")
-        
-        # Analyze the transcripts using GPT-4
-        print("\n=== Analysis of transcripts by GPT-4 ===")
-        result = analyze_transcripts(combined_context)
-        print(f"\nAnalysis result: {result}")
-        
-        # Send result to endpoint
-        print("\n=== Sending result to endpoint ===")
-        send_result_to_endpoint(result)
+        if all_transcriptions:
+            print("\n=== Combined context from all transcriptions ===")
+            combined_context = create_combined_context(all_transcriptions)
+            print(combined_context)
+            
+            # Save combined context to a file
+            with open(output_file, "w", encoding="utf-8") as f:
+                f.write(combined_context)
+            print(f"\nSaved combined context to file: {output_file}")
+        else:
+            print("No transcriptions were generated.")
+            exit()
+    
+    # Analyze the transcripts using GPT-4
+    print("\n=== Analysis of transcripts by GPT-4 ===")
+    result = analyze_transcripts(combined_context)
+    print(f"\nAnalysis result: {result}")
+    
+    # Send result to endpoint
+    print("\n=== Sending result to endpoint ===")
+    send_result_to_endpoint(result)
