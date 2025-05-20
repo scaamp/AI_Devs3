@@ -40,7 +40,7 @@ The flag (i.e., the answer) was the name of a place — a concept described meta
 ## Opis  
 Zadanie polegało na odnalezieniu ukrytej flagi, zakodowanej jako odniesienia `A1S22` (akapit 1, słowo 22) w notatce. Na obrazie znajdował się tekst i zestaw zakodowanych pozycji. Odnosiły się one do innego obrazu z listem, który należało odczytać za pomocą OCR.
 
-Flaga (czyli odpowiedź) to nazwa miejsca, ukryta symbolicznie w przesłaniu wynikającym z odczytanych słów. Hasłem końcowym okazała się **Atlantyda**.
+Flaga (czyli odpowiedź) to nazwa miejsca, ukryta symbolicznie w przesłaniu wynikającym z odczytanych słów.
 
 ## Moje podejście  
 1. Stworzyłem aplikację w Pythonie z GUI do wyboru obrazów.
