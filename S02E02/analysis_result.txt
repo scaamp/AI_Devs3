@@ -1,12 +1,12 @@
 {
   "_thinking": [
     "Let me think...",
-    "Fragment 1 contains streets like Kalinowa and Chopina, which are quite common.",
-    "Fragment 2 shows a street named Kalinowa again and Konstanty Ildefons Gałczyński street.",
-    "Fragment 3 includes a Żabka store and streets like Twardowskiego and Szwedzka.",
-    "Fragment 4 has a Cmentarz ewangelicko-augsburski and route 534.",
-    "The presence of route 534 and specific street names like Chełmińska suggest Grudziądz.",
-    "Most consistent elements point to Grudziądz; focus on that rather than split clues."
+    "Fragment 1 contains Chełmińska and Chopina streets. These are common names and don't pinpoint a city.",
+    "Fragment 2 includes Kalinkowa and Konstantego Ildefonsa Gałczyńskiego, which are common and not unique.",
+    "Fragment 3 contains Żabka and Lewiatan as recognizable shops.",
+    "Fragment 4 mentions Cmentarna and Cmentarz ewangelicko-augsburski, pointing toward a specific cemetery.",
+    "The cemetery could be related to Grudziądz, which has such a cemetery.",
+    "Most consistent elements, especially the cemetery, point to Grudziądz."
   ],
   "city": "Grudziądz"
 }

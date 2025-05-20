@@ -4,8 +4,6 @@ from tkinter import filedialog
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-import json
-import requests
 
 # Load environment variables
 load_dotenv()
