@@ -1,0 +1,12 @@
+{
+  "_thinking": [
+    "Let me think...",
+    "Fragment 1 contains streets like Kalinowa and Chopina, which are quite common.",
+    "Fragment 2 shows a street named Kalinowa again and Konstanty Ildefons Gałczyński street.",
+    "Fragment 3 includes a Żabka store and streets like Twardowskiego and Szwedzka.",
+    "Fragment 4 has a Cmentarz ewangelicko-augsburski and route 534.",
+    "The presence of route 534 and specific street names like Chełmińska suggest Grudziądz.",
+    "Most consistent elements point to Grudziądz; focus on that rather than split clues."
+  ],
+  "city": "Grudziądz"
+}
