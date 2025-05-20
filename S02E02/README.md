@@ -1,4 +1,4 @@
-# S01E06
+# S02E02
 
 ## 🇬🇧 Task Name  
 **City Map Recognition via GPT-4 Vision**
