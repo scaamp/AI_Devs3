@@ -33,7 +33,7 @@ This task improved my ability to orchestrate multiple AI services into one pipel
 **Wizualizacja robota przez GPT-4 i DALL·E**
 
 ## Opis  
-Celem było wygenerowanie obrazu robota na podstawie opisu pobranego z API. Opis ten był często techniczny i niejasny, dlatego musiał zostać przekształcony na dokładny opis wizualny. Użyliśmy GPT-4 do konwersji opisu na angielski prompt przyjazny dla DALL·E 3, który wygenerował finalny obrazek. Następnie przesłaliśmy URL obrazka jako odpowiedź.
+Celem było wygenerowanie obrazu robota na podstawie opisu pobranego z API. Opis ten był często chaotyczny i niejasny, dlatego musiał zostać przekształcony na dokładny opis wizualny. Użyliśmy GPT-4 do konwersji opisu na angielski prompt przyjazny dla DALL·E 3, który wygenerował finalny obrazek. Następnie przesłaliśmy URL obrazka jako odpowiedź.
 
 ## Moje podejście  
 1. Załadowałem klucze z pliku `.env`.
