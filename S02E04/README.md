@@ -71,13 +71,13 @@ The task required multimodal data processing across formats: `.txt`, `.png`, `.m
    - Tesseract OCR ([UB Mannheim build for Windows](https://github.com/UB-Mannheim/tesseract/wiki))
    - FFMPEG (required for Whisper)
 
-3. Install Python packages:
+4. Install dependencies
 
    ```bash
-   pip install -r requirements.txt
+   pip install ...
    ```
 
-4. Run the script:
+3. Run the script:
 
    ```bash
    python main.py
@@ -176,7 +176,7 @@ Zadanie wymagało przetwarzania danych w formatach: `.txt`, `.png`, `.mp3`.
 3. Zainstaluj zależności:
 
    ```bash
-   pip install -r requirements.txt
+   pip install ...
    ```
 
 4. Uruchom skrypt:
