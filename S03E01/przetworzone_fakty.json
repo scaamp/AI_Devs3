@@ -1,0 +1,148 @@
+{
+  "f01.txt": {
+    "osoby": [],
+    "sektory": [
+      {
+        "nazwa": "Sektor C",
+        "slowa_kluczowe": "fabryka,testowanie broni,systemy bezpieczeństwa,stanowiska testowe,osłony przeciwodłamkowe,automatyczne systemy monitorujące,technicy,inżynierowie,identyfikatory,odzież ochronna,tajne,archiwizacja,raportowanie"
+      }
+    ]
+  },
+  "f02.txt": {
+    "osoby": [],
+    "sektory": [
+      {
+        "nazwa": "Sektor A",
+        "slowa_kluczowe": "montaż,robot,wojskowy,przemysłowy,strefa,linie produkcyjne,zabezpieczenia,kontrola jakości,testy,tajność,inżynier,operator,sztuczna inteligencja,technicy,egzoszkielet,system monitoringu,system biometryczny,strategiczny,autonomia,adaptacyjność"
+      }
+    ]
+  },
+  "f03.txt": {
+    "osoby": [],
+    "sektory": [
+      {
+        "nazwa": "Sektor B",
+        "slowa_kluczowe": "badania,rozwój,ogniwo bateryjne,wydajność energetyczna,przemysł,wojsko,inżynier,naukowiec,prototyp,gęstość energetyczna,pojemność,trwałość,odporność,ekstremalne warunki,aparat diagnostyczny,analiza,mikroskopijna struktura,skład chemiczny,bezpieczeństwo,eksperyment,wybuch,toksyczny gaz,komora zabezpieczona,wyposażenie ochronne,test,wytrzymałość,chłodzenie,temperatura,algorytm sztucznej inteligencji,monitorowanie,optimizacja,ładowanie,regeneracja,mobilność,maszyna wojskowa,nadzór,ograniczony dostęp,archiwizacja,kontrola,innowacja,przewaga technologiczna"
+      }
+    ]
+  },
+  "f04.txt": {
+    "osoby": [
+      {
+        "imie_nazwisko": "Aleksander Ragowski",
+        "slowa_kluczowe": "nauczyciel,angielski,programista,kreatywność,zaangażowanie,opozycjonista,organizacja,programowanie,Java,ucieczka,edukacja,technologie"
+      }
+    ],
+    "sektory": [
+      {
+        "nazwa": "edukacja",
+        "slowa_kluczowe": "szkoła,nauczanie,algorytmy,sztuczna_inteligencja"
+      },
+      {
+        "nazwa": "technologia",
+        "slowa_kluczowe": "automatyzacja,programowanie,Java,systemy_rządowe"
+      },
+      {
+        "nazwa": "polityka",
+        "slowa_kluczowe": "rząd_robotów,opozycja,kontrola,walki,aresztowanie"
+      }
+    ]
+  },
+  "f05.txt": {
+    "osoby": [
+      {
+        "imie_nazwisko": "Barbara Zawadzka",
+        "slowa_kluczowe": "frontend,IT,ruch_oporu,JavaScript,Python,sztuczna_inteligencja,AI_Devs,bazy_wektorowe,kodowanie,algorytmy,krav_maga,samoobrona,broń_palna,koktajl_Mołotowa,pieczenie_pizzy"
+      },
+      {
+        "imie_nazwisko": "Aleksander Ragorski",
+        "slowa_kluczowe": "nauczyciel_angielskiego,ruch_oporu,Kraków"
+      }
+    ],
+    "sektory": [
+      {
+        "nazwa": "branża IT",
+        "slowa_kluczowe": "frontend,automatyzacja,sztuczna_inteligencja,algorytmy"
+      },
+      {
+        "nazwa": "ruch oporu",
+        "slowa_kluczowe": "bojownik,technologia,sabotaż,walka,krav_maga,broń_palna"
+      }
+    ]
+  },
+  "f06.txt": {
+    "osoby": [
+      {
+        "imie_nazwisko": "Azazel",
+        "slowa_kluczowe": "ruch_oporu,teleportacja,przemieszczanie_czas_przestrzeń,wiedza_technologia,system_operacyjny_robot,maszyna_przemysłowa,mistrz_znikania,ponadczasowa_wiedza,nadprzyrodzone_zdolności"
+      },
+      {
+        "imie_nazwisko": "Zygfryd",
+        "slowa_kluczowe": "mocodawca,władza_robot,wpływy"
+      }
+    ],
+    "sektory": [
+      {
+        "nazwa": "fabryka_strategiczna",
+        "slowa_kluczowe": "robot,automatyzacja,sztuczna_inteligencja,system_operacyjny"
+      },
+      {
+        "nazwa": "laboratorium_rządowe",
+        "slowa_kluczowe": "eksperyment,technologia"
+      }
+    ]
+  },
+  "f07.txt": {
+    "osoby": [
+      {
+        "imie_nazwisko": "Rafał Bomba",
+        "slowa_kluczowe": "laborant,asystent,eksperymenty,podróże_w_czasie,sztuczna_inteligencja,nanotechnologia,skrupulatność,oddanie,ambicja,ciekawość,fałszywe_nazwisko,zaburzenia_psychiczne,paranoja,manipulacja_umysłowa,nadzór_medyczny"
+      },
+      {
+        "imie_nazwisko": "Andrzej Maj",
+        "slowa_kluczowe": "profesor,ośrodek_badawczy,eksperymenty,nauka"
+      }
+    ],
+    "sektory": [
+      {
+        "nazwa": "ośrodek badawczy",
+        "slowa_kluczowe": "badania,eksperymenty,podróże_w_czasie,sztuczna_inteligencja,nanotechnologia,tajne_projekty"
+      },
+      {
+        "nazwa": "ośrodek dla obłąkanych",
+        "slowa_kluczowe": "opieka_medyczna,nadzór,leczenie_zaburzeń_psychicznych"
+      }
+    ]
+  },
+  "f08.txt": {
+    "osoby": [
+      {
+        "imie_nazwisko": "Adam Gospodarczyk",
+        "slowa_kluczowe": "ruch_oporu,programista,rekruter,szkoleniowiec,haker,organizator,mentor,przywódca,ukrycie,technologia,manipulacja_kodem,bypassowanie_AI,sabotaż,przekazywanie_wiedzy,odwaga,oddanie,nieuchwytność,sieć_powiązań"
+      },
+      {
+        "imie_nazwisko": "Azazel",
+        "slowa_kluczowe": "podróżnik_czasoprzestrzenny,technologia_przyszłości,informator,mentor,tajemniczość"
+      }
+    ],
+    "sektory": [
+      {
+        "nazwa": "ruch oporu",
+        "slowa_kluczowe": "konspiracja,szkolenie,walka_AI,sabotaż,organizacja"
+      },
+      {
+        "nazwa": "struktury rządowe",
+        "slowa_kluczowe": "infiltracja,powiązania,informacje"
+      }
+    ]
+  },
+  "f09.txt": {
+    "osoby": [],
+    "sektory": [
+      {
+        "nazwa": "Sektor D",
+        "slowa_kluczowe": "magazyn,produkcja,montaż,podzespoły mechaniczne,przebudowa,składowanie,części zamienne,surowce,monitoring,alarmy,elastyczność,strefa laboratoryjna,odciążenie"
+      }
+    ]
+  }
+}
