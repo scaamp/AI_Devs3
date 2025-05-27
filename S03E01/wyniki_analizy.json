@@ -1,7 +1,7 @@
 [
   {
     "nazwa_pliku": "2024-11-12_report-00-sektor_C4.txt",
-    "slowa_kluczowe": "Aleksander_Ragowski,fabryka,dział_kontroli,C4,nauczyciel,angielski,programista,kreatywność,zaangażowanie,opozycjonista,organizacja,programowanie,Java,ucieczka,edukacja,technologie"
+    "slowa_kluczowe": "Aleksander_Ragowski,fabryka,dział_kontroli,C4,nauczyciel,angielski,programista,Java,kreatywność,zaangażowanie,opozycjonista,organizacja,ucieczka,przyswajanie_technologii"
   },
   {
     "nazwa_pliku": "2024-11-12_report-01-sektor_A1.txt",
@@ -9,7 +9,7 @@
   },
   {
     "nazwa_pliku": "2024-11-12_report-02-sektor_A3.txt",
-    "slowa_kluczowe": "raport,A3,patrol_nocny,peryferia_obiektu"
+    "slowa_kluczowe": "raport,sektor_A3,peryferie_obiektu"
   },
   {
     "nazwa_pliku": "2024-11-12_report-03-sektor_A3.txt",
@@ -17,7 +17,7 @@
   },
   {
     "nazwa_pliku": "2024-11-12_report-04-sektor_B2.txt",
-    "slowa_kluczowe": "raport,sektor_B2,zachodnia_część_terenu,2024-11-12"
+    "slowa_kluczowe": "raport,sektor B2,zachodnia część terenu"
   },
   {
     "nazwa_pliku": "2024-11-12_report-05-sektor_C1.txt",
@@ -29,14 +29,14 @@
   },
   {
     "nazwa_pliku": "2024-11-12_report-07-sektor_C4.txt",
-    "slowa_kluczowe": "Barbara_Zawadzka,frontend,IT,ruch_oporu,JavaScript,Python,sztuczna_inteligencja,AI_Devs,bazy_wektorowe,kodowanie,algorytmy,krav_maga,samoobrona,broń_palna,koktajl_Mołotowa,pieczenie_pizzy,C4"
+    "slowa_kluczowe": "Barbara_Zawadzka,sektor_C4,frontend,IT,ruch_oporu,JavaScript,Python,sztuczna_inteligencja,bazy_wektorowe,kodowanie,algorytmy,krav_maga,samoobrona,broń_palna,koktajl_Mołotowa,pieczenie_pizzy"
   },
   {
     "nazwa_pliku": "2024-11-12_report-08-sektor_A1.txt",
-    "slowa_kluczowe": "raport,sektor A1,obszar patrolowy"
+    "slowa_kluczowe": "raport,sektor_A1,2024"
   },
   {
     "nazwa_pliku": "2024-11-12_report-09-sektor_C2.txt",
-    "slowa_kluczowe": "raport,sektor_C2,peryferia_zachodnie,2024"
+    "slowa_kluczowe": "raport,sektor_C2,peryferia_zachodnie"
   }
 ]
