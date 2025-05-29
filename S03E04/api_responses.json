@@ -1,0 +1,70 @@
+{
+  "people_ALEKSANDER": {
+    "code": 0,
+    "message": "KRAKOW LUBLIN WARSZAWA"
+  },
+  "people_ANDRZEJ": {
+    "code": 0,
+    "message": "WARSZAWA GRUDZIADZ"
+  },
+  "places_KRAKOW": {
+    "code": 0,
+    "message": "ALEKSANDER BARBARA ADAM"
+  },
+  "places_LUBLIN": {
+    "code": 0,
+    "message": "[**RESTRICTED DATA**]"
+  },
+  "places_WARSZAWA": {
+    "code": 0,
+    "message": "RAFAŁ ALEKSANDER ANDRZEJ"
+  },
+  "places_GRUDZIADZ": {
+    "code": 0,
+    "message": "RAFAL AZAZEL"
+  },
+  "people_BARBARA": {
+    "code": 0,
+    "message": "[**RESTRICTED DATA**]"
+  },
+  "people_ADAM": {
+    "code": 0,
+    "message": "KRAKOW CIECHOCINEK"
+  },
+  "people_RAFAL": {
+    "code": 0,
+    "message": "GRUDZIADZ WARSZAWA LUBLIN"
+  },
+  "people_AZAZEL": {
+    "code": 0,
+    "message": "GRUDZIADZ WARSZAWA KRAKOW LUBLIN ELBLAG"
+  },
+  "places_CIECHOCINEK": {
+    "code": 0,
+    "message": "ADAM GABRIEL"
+  },
+  "places_ELBLAG": {
+    "code": 0,
+    "message": "BARBARA"
+  },
+  "people_GABRIEL": {
+    "code": 0,
+    "message": "FROMBORK"
+  },
+  "places_FROMBORK": {
+    "code": 0,
+    "message": "GABRIEL ARTUR AZAZEL"
+  },
+  "people_ARTUR": {
+    "code": 0,
+    "message": "KONIN"
+  },
+  "places_KONIN": {
+    "code": 0,
+    "message": "GLITCH"
+  },
+  "people_GLITCH": {
+    "code": 0,
+    "message": "https://centrala.ag3nts.org/dane/na_smartfona.png"
+  }
+}
