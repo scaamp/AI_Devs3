@@ -129,7 +129,7 @@ def process_response(response_data, aidevs_key, processed_queries=None):
     # If we found new queries, process them recursively
     if new_queries:
         print(f"Znaleziono nowe zapytania: {new_queries}")
-        time.sleep(2)  # Add delay to avoid rate limiting
+        time.sleep(1)  # Add delay to avoid rate limiting
         recursive_results = process_response(results, aidevs_key, processed_queries)
         results.update(recursive_results)
     

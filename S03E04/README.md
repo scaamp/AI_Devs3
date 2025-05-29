@@ -1,65 +1,75 @@
-# 🧠 AI_devs3 — S03E03: Hybrid Database Reasoning
+# S03E04
 
-## 🇬🇧 Task Name
-`database`
+## 🇬🇧 Task Name  
+**Tracking Barbara Zawadzka**
 
-## 🎯 Goal  
-Query a real company database (BanAN) via provided API to identify IDs of **active datacenters** managed by **inactive employees (on leave)**.
+## Description  
+The task was to find the last known location of Barbara Zawadzka by analyzing a partial note and using two interconnected APIs (`/people` and `/places`). Each endpoint allowed querying either by name (to retrieve cities visited) or by city (to find people seen there). The data may be incomplete, so recursive and adaptive querying was required to build a graph of relations and discover where Barbara is hiding.
 
-## 🧩 My Approach  
-1. Used the `show tables` and `show create table` SQL commands via the API to dynamically retrieve structure of all available tables.
-2. Parsed the table schemas: `users`, `datacenters`, and `connections`.
-3. Sent the structures and the natural language task to OpenAI's GPT-4 to generate a precise SQL query.
-4. Executed the generated query via the API and received a list of matching datacenter IDs.
-5. Reported the result to the central server to obtain the flag.
-6. Additionally explored the `correct_order` table to find a potential hidden message using ordered letters.
+## My Approach  
+1. I downloaded and parsed the content of the `barbara.txt` file.
+2. I used GPT-4 to extract all names and cities from the note, structured as JSON.
+3. For each person and city found, I queried the `/people` and `/places` endpoints.
+4. The script recursively followed every new lead (new names and cities) discovered in the API responses.
+5. I avoided infinite loops by storing already processed queries.
+6. I sent each city found to the `/report` endpoint, hoping one of them would be Barbara's location.
+7. All data was saved to a local file (`api_responses.json`) for analysis.
 
-## 📦 Technologies Used  
-- Python 3  
-- `requests` – for HTTP API calls  
-- `dotenv` – to handle environment variables  
-- `openai` – to generate SQL via GPT-4  
-- JSON handling & dynamic code generation  
+## Challenges  
+- Avoiding infinite recursion and redundant API requests.
+- Handling potentially missing or incomplete data.
+- Managing delay to avoid API rate limits.
+- Using GPT-4 for accurate and controlled extraction of structured data from unstructured text.
 
-## ⚠️ Challenges  
-- Required dynamic analysis of unknown DB structure.
-- Avoided hardcoding by leveraging GPT-4 for context-based SQL generation.
-- Ensured flexibility and scalability for future database tasks.
+## Tools and Libraries  
+- Python 3.13  
+- `requests` – HTTP communication  
+- `openai` – GPT-4 API  
+- `dotenv` – managing environment variables  
+- `json` – data processing  
+- `time` – throttling requests
 
-## ✅ What I Learned  
-- Using OpenAI to automate SQL query writing based on schema and intent.
-- Building general-purpose SQL agents with LLMs.
-- API-driven database querying with full feedback cycle.
+## What I Learned  
+This task sharpened my skills in:
+- working with recursive API traversal,
+- prompt engineering for structured data extraction,
+- writing robust scripts that loop through unpredictable data,
+- simulating graph-like traversal without traditional graph libraries.
 
 ---
 
-## 🇵🇱 Nazwa zadania
-`database`
+## 🇵🇱 Nazwa zadania  
+**Namierzanie Barbary Zawadzkiej**
 
-## 🎯 Cel  
-Wykonanie zapytania do prawdziwej bazy danych firmy BanAN, aby znaleźć ID **aktywnych centrów danych**, którymi zarządzają **nieaktywni pracownicy (na urlopie)**.
+## Opis  
+Celem zadania było znalezienie ostatniego znanego miejsca pobytu Barbary Zawadzkiej, analizując częściową notatkę oraz używając dwóch powiązanych ze sobą API (`/people` i `/places`). Każde z nich pozwalało na wyszukiwanie imienia (aby dostać miasta) lub miasta (aby dostać osoby widziane w danym miejscu). Dane mogły być niepełne, więc wymagane było rekurencyjne odpytanie i powiązanie wszystkich tropów.
 
-## 🧩 Moje podejście  
-1. Wysłałem zapytanie `show tables` i `show create table`, by dynamicznie pobrać strukturę wszystkich dostępnych tabel.
-2. Przeanalizowałem schematy tabel: `users`, `datacenters` i `connections`.
-3. Przesłałem strukturę oraz pytanie w języku naturalnym do GPT-4, aby wygenerował odpowiednie zapytanie SQL.
-4. Wykonałem zapytanie poprzez API i otrzymałem listę pasujących ID centrów danych.
-5. Odpowiedź została przesłana do centrali i uzyskałem flagę.
-6. Dodatkowo przeszukałem tabelę `correct_order`, aby odkryć potencjalną ukrytą wiadomość na podstawie posortowanych liter.
+## Moje podejście  
+1. Pobrałem i sparsowałem zawartość pliku `barbara.txt`.
+2. Za pomocą GPT-4 wyciągnąłem wszystkie imiona i miasta, formatując wynik jako JSON.
+3. Dla każdej znalezionej osoby i miasta odpytuję API `/people` i `/places`.
+4. Skrypt rekurencyjnie śledzi nowe tropy (imiona i miasta) znalezione w odpowiedziach.
+5. Unikam zapętlenia, zapisując już przetworzone zapytania.
+6. Każde znalezione miasto wysyłam do `/report`, licząc na to, że któreś z nich to miejsce pobytu Barbary.
+7. Wszystkie odpowiedzi zapisałem lokalnie w `api_responses.json` do dalszej analizy.
 
-## 📦 Technologie  
-- Python 3  
+## Problemy i wyzwania  
+- Unikanie nieskończonej rekurencji i zbędnych zapytań.
+- Radzenie sobie z niekompletnymi danymi z API.
+- Ograniczenia szybkości zapytań (rate limit).
+- Wydobycie dokładnych danych strukturalnych z tekstu z pomocą GPT-4.
+
+## Użyte biblioteki i narzędzia  
+- Python 3.13  
 - `requests` – komunikacja z API  
-- `dotenv` – obsługa zmiennych środowiskowych  
-- `openai` – generowanie SQL przez GPT-4  
-- Obsługa JSON i dynamiczne generowanie kodu  
+- `openai` – użycie GPT-4  
+- `dotenv` – zarządzanie kluczami środowiskowymi  
+- `json` – obróbka danych  
+- `time` – kontrola tempa zapytań
 
-## ⚠️ Wyzwania  
-- Dynamiczna analiza nieznanej struktury bazy.
-- Unikanie hardcodowania zapytań – pełna elastyczność.
-- Automatyzacja komunikacji z API i analiza odpowiedzi.
-
-## ✅ Czego się nauczyłem  
-- Automatyzacja pisania zapytań SQL za pomocą GPT-4.
-- Budowa uniwersalnego agenta SQL z wykorzystaniem LLM.
-- Obsługa zadań bazodanowych w sposób dynamiczny i skalowalny.
+## Czego się nauczyłem  
+Zadanie rozwinęło moje umiejętności w zakresie:
+- pisania rekurencyjnych pętli analizujących dane z API,
+- konstruowania promptów do wyciągania danych strukturalnych,
+- zarządzania przetwarzaniem nieprzewidywalnych informacji,
+- symulowania przejść grafowych bez potrzeby tworzenia struktur grafowych.
