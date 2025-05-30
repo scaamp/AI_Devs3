@@ -95,6 +95,50 @@ def send_result_to_report(result):
     response = requests.post(url_report, json=params)
     return response.json()
 
+def save_connections_data():
+    # Get table structures first
+    connections_structure = get_table_structure('connections')
+    users_structure = get_table_structure('users')
+    print("\nConnections table structure:", connections_structure)
+    print("\nUsers table structure:", users_structure)
+    
+    # Get all data from connections table
+    connections_query = "SELECT * FROM connections"
+    connections_result = execute_query(connections_query)
+    
+    # Get id and username from users table
+    users_query = "SELECT id, username FROM users"
+    users_result = execute_query(users_query)
+    
+    if 'reply' in connections_result and connections_result['reply'] and 'reply' in users_result and users_result['reply']:
+        # Create a dictionary with both structures and data
+        output_data = {
+            "connections": {
+                "structure": connections_structure,
+                "data": connections_result['reply']
+            },
+            "users": {
+                "structure": users_structure,
+                "data": users_result['reply']
+            }
+        }
+        
+        # Save to file
+        with open('database_data.json', 'w', encoding='utf-8') as f:
+            json.dump(output_data, f, indent=2)
+        print("\nData saved to database_data.json")
+        
+        # Print the data
+        print("\nConnections data:")
+        for row in connections_result['reply']:
+            print(row)
+            
+        print("\nUsers data:")
+        for row in users_result['reply']:
+            print(row)
+    else:
+        print("No data found in one or both tables")
+
 if __name__ == "__main__":
     # Get all tables
     tables_result = get_database_tables()
@@ -113,6 +157,9 @@ if __name__ == "__main__":
             print(structure)
             if 'reply' in structure and structure['reply']:
                 table_structures[table] = structure['reply'][0]['Create Table']
+        
+        # Save connections data
+        save_connections_data()
         
         # First, let's check the correct_order table for the hidden flag
         query = """
