@@ -105,7 +105,7 @@ def analyze_next_sentence(conversation_start, current_parts, remaining_parts, co
     
     def make_api_call():
         return client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": "Jesteś asystentem analizującym rozmowy telefoniczne. Twoim zadaniem jest znalezienie jednego następnego zdania pasującego do kontekstu rozmowy."},
                 {"role": "user", "content": prompt}
@@ -311,7 +311,7 @@ Pytania:
 
     def make_api_call_for_llm():
         return client.chat.completions.create(
-            model="gpt-4",
+            model="gpt-4.1",
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt}
@@ -390,7 +390,7 @@ def process_answers(answers, sorted_data, questions):
                     
                     def make_fact_api_call():
                         return client.chat.completions.create(
-                            model="gpt-4",
+                            model="gpt-4.1",
                             messages=[
                                 {"role": "system", "content": "Jesteś asystentem analizującym fakty i odpowiadającym na pytania. Zwracaj odpowiedzi w formacie JSON. Zwróć TYLKO obiekt JSON."},
                                 {"role": "user", "content": fact_prompt}
